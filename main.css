@@ -1,0 +1,109 @@
+/* Imports */
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;400;600&display=swap');
+
+/* Variables */
+:root{
+    /* Screen widths */
+    --mobile: 23.4375em;
+    --desktop: 90em;
+
+    /* Card dimensions */
+    --desktop-width: 32.5em;
+    --desktop-height: 19.375em;
+
+    --refresh-size: 3.8125em;
+
+    /* Primary colors  */
+    --light-cyan: hsl(193, 38%, 86%);
+    --neon-green: hsl(150, 100%, 66%);
+
+    /* Neutral colors */
+    --grayish-blue: hsl(217, 19%, 38%);
+    --dark-grayish-blue: hsl(217, 19%, 24%);
+    --dakr-blue: hsl(218, 23%, 16%);
+
+    /* Font settings  */
+    --quote-size: 1.75em;
+    --main-font: 'Manrope', sans-serif;
+}
+/* Reseting style  */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    background: var(--dakr-blue);
+    font-family: var(--main-font);
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card{
+    width: var(--desktop-width);
+    height: var(--desktop-height);
+    border-radius: 2em;
+    background-color: var(--dark-grayish-blue);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    color: var(--light-cyan);
+    position: relative;
+    padding: 1em;
+
+}
+@media screen and (max-width: 23.43em) {
+    .card{
+        width: 90vw;
+        
+    }
+}
+.advice_id{
+    color: var(--neon-green);
+    text-transform: uppercase;
+}
+.quote{
+    font-size: var(--quote-size);
+    text-align: center;
+}
+.devider{
+    margin-bottom: 1.5em;
+}
+.refresh{
+    width: var(--refresh-size);
+    height: var(--refresh-size);
+    border-radius: 50%;
+    background-color: var(--neon-green);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+    right: 50%;
+    transform: translate(50%, 50%);
+    transition: all .3s ease-in-out;
+}
+.refresh:hover{
+    -webkit-box-shadow: 0px 0px 25px 6px var(--neon-green); 
+    box-shadow: 0px 0px 25px 6px var(--neon-green);
+}
+
+
+/* Positioning attributions */
+.attribution{
+    position: absolute;
+    bottom: 1.5625em;
+    right: 50%;
+    transform: translate(50%, 0);
+    font-size: 0.6875em; 
+    text-align: center;
+    color: white;
+}
+.attribution a { 
+    color: hsl(228, 38%, 59%);
+}
